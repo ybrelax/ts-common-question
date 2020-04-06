@@ -16,3 +16,28 @@ const enum Colors {
 }
 
 console.log(Colors.Red, Colors.Yellow)
+
+
+// 使用场景
+
+enum Role {
+    superAdmin,
+    admin,
+    normal
+}
+
+function switchRole(role: number) {
+    switch(role) {
+        case Role.superAdmin: // 1
+         console.log('超级管理员');
+         break;
+         case Role.admin: //2
+            console.log("管理员");
+            break;
+        default: 
+            console.log('一般用户');
+            break
+    }
+}
+
+switchRole(1)
