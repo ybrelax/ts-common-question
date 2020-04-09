@@ -11,3 +11,15 @@ interface stringObject {
 }
 
 let obj:stringObject = {name: 'cccc'}
+
+interface discount1 {
+    getNum: (price:number) => number
+}
+
+interface discount2 {
+    (price:number): number
+}
+
+let cost:discount2 = function(price:number) {
+    return price * 8;
+}
